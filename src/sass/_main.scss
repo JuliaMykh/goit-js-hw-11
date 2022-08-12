@@ -85,6 +85,11 @@ p {
     color: #ffffff;
   }
 }
+.gallery{
+  display: flex;
+    flex-wrap: wrap;
+}
+
 
 .photo-card {
   margin-bottom: 10px;
