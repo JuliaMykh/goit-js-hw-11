@@ -1,4 +1,4 @@
-import { fetchImages } from './fetch-images';
+import  fetchImages  from './fetch-images';
 // import imageСardTemplate from './card-templates.hbs';
 import { imageСardTemplate }  from './template';
 
