@@ -1,6 +1,13 @@
-export function imageСardTemplate({ largeImageURL, webformatURL, tags, likes, views, comments, downloads }) {
+export function imageСardTemplate({
+  largeImageURL,
+  webformatURL,
+  tags,
+  likes,
+  views,
+  downloads,
+  comments,
+}) {
   return `
-  
   <div class='photo-card'>
   <a href='${largeImageURL}'>
     <img src='${webformatURL}' alt='${tags}' loading='lazy' />
@@ -23,7 +30,5 @@ export function imageСardTemplate({ largeImageURL, webformatURL, tags, likes, v
       ${downloads}
     </p>
   </div>
-  </div>`
-    ;
-  
+  </div>`;
 }
