@@ -47,20 +47,19 @@ async function onSubmitSearchForm(e) {
     return;
   }
 
+  try {
   // функція пошуку зображень
-  const response = await fetchImages(searchQuery, currentPage);
-  currentHits = response.hits.length;
+    const response = await fetchImages(searchQuery, currentPage);
+    currentHits = response.hits.length;
 
-// якщо більше 40 знайдених зображень - прибираємо клас хідден у кнопки Завантажити ще
-  if (response.totalHits > 40) {
+  // якщо більше 40 знайдених зображень - прибираємо клас хідден у кнопки Завантажити ще
+    if (response.totalHits > 40) {
     loadMoreBtn.classList.remove('is-hidden');
   } else {
   // якщо ні - додаємо
     loadMoreBtn.classList.add('is-hidden');
   }
 
-  try {
-  // умова якщо щось знайдено
     if (response.totalHits > 0) {
       Notify.success(`Hooray! We found ${response.totalHits} images.`);
       gallery.innerHTML = '';

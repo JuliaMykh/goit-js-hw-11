@@ -1,4 +1,4 @@
-export function imageСardTemplate({ largeImageURL, webformatURL, tags, likes, views, downloads }) {
+export function imageСardTemplate({ largeImageURL, webformatURL, tags, likes, views, comments, downloads }) {
   return `
   
   <div class='photo-card'>
